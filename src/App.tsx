@@ -1,4 +1,7 @@
+
 import Home from "./components/pages/Home"
+
+//import ListPatients from "./components/pages/ListPatients"
 
 function App() {
 
@@ -6,6 +9,9 @@ function App() {
     <div>
 
       <Home />
+
+      {/*<ListPatients />*/}
+      
     </div>
   )
 }

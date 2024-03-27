@@ -1,11 +1,11 @@
-type datasProps = {
+interface datasProps {
     logo: string,
     title: string,
 }
 
 export default function Card( {logo, title}:datasProps ) {
     return (
-        <div className="p-5 h-autoo rounded-xl border-[2px] shadow-2xl">
+        <div className="p-5 h-auto rounded-xl border-[2px] w-80 lg:w-[20vw] shadow-2xl lg:h-64">
 
             <img 
                 src={logo} 
