@@ -9,7 +9,9 @@
     "build": "tsc && vite build && webpack",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch src/data/db.json"
+    "server": "json-server --watch src/data/db.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
