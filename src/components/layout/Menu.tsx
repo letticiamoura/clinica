@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import perfil from "../../assets/perfil.png";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
 
@@ -56,11 +57,11 @@ export default function Menu() {
                                 </a>
                             </div>
 
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/listPatients">
-                                    <h2>List Patients</h2>
-                                </a>
-                            </div>
+                                <Link to="/listPatients">
+                                    <div className="p-3 hover:bg-slate-600">
+                                        <h1>List</h1>
+                                    </div>
+                                </Link>
                         </>
                     )}
                 </div>

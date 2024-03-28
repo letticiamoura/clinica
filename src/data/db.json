@@ -84,32 +84,46 @@
             "cpf": "123.456.789-85",
             "birthDate": "29/12/1998",
             "active": true
-        },
+        }
+    ],
+    "doctors": [
         {
-            "id": 13,
-            "name": "Chloe Miller",
-            "cpf": "741.852.963-78",
+            "id": 1,
+            "name": "Lousi Lopes",
+            "cro": 5654878,
+            "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
             "active": true
         },
         {
-            "id": 14,
-            "name": "Riley Davis",
-            "cpf": "123.456.789-85",
+            "id": 2,
+            "name": "Larissa Chaves",
+            "cro": 4654554,
+            "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
             "active": true
         },
         {
-            "id": 15,
-            "name": "Chloe Miller",
-            "cpf": "741.852.963-78",
+            "id": 3,
+            "name": "Caio Facundes",
+            "cro": 1123235,
+            "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
             "active": true
         },
         {
-            "id": 16,
-            "name": "Riley Davis",
-            "cpf": "123.456.789-85",
+            "id": 4,
+            "name": "Marina Antonela",
+            "cro": 7878555,
+            "cpf": "258.522.147-56",
+            "birthDate": "29/12/1998",
+            "active": true
+        },
+        {
+            "id": 5,
+            "name": "Tiago Santos",
+            "cro": 4454878,
+            "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
             "active": true
         }
