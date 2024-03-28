@@ -1,5 +1,5 @@
-import patients from "../assets/paciente.png";
-import doctors from "../assets/medico.png";
+import patients from "../assets/patients.png";
+import doctors from "../assets/doctor.png";
 import apointments from "../assets/calendar.png"
 
 import Card from "../components/layout/Card";
