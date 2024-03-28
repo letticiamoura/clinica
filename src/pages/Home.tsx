@@ -1,6 +1,6 @@
 import patients from "../assets/paciente.png";
 import doctors from "../assets/medico.png";
-import apointments from "../assets/calendario.png"
+import apointments from "../assets/calendar.png"
 
 import Card from "../components/layout/Card";
 import Menu from "../components/layout/Menu";

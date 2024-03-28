@@ -6,7 +6,12 @@ export default function ListDoctors() {
 
     const url = "http://localhost:3000/doctors";
 
-    const [ data, setData ] = useState([]);
+    const [ data, setData ] = useState([{
+        name: '',
+        cpf: '',
+        cro: '',
+        birthDate: ''
+    }]);
 
     useEffect(() => {
         axios.get(url) 

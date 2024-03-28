@@ -5,7 +5,11 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 export default function ListAppointments() {
     const url = "http://localhost:3000/apointments";
 
-    const [ data, setData ] = useState([]);
+    const [ data, setData ] = useState([{
+        name: '',
+        cpf: '',
+        birthDate: ''
+    }]);
 
     useEffect(() => {
         axios.get(url)
