@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && webpack",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "server": "json-server --watch src/data/db.json",
     "predeploy": "npm run build",
