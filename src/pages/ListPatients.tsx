@@ -5,7 +5,11 @@ import { useEffect, useState } from "react";
 
 export default function ListPatients() {
 
-    const [ data, setData ] = useState([])
+    const [ data, setData ] = useState([{
+        name: '',
+        cpf: '',
+        birthDate: ''
+    }])
 
     const url = "http://localhost:3000/patients";
 
