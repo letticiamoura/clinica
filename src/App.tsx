@@ -8,6 +8,8 @@ function App() {
   return (
 
       <BrowserRouter>
+      
+      <Home />
 
         <Routes>
 
