@@ -6,9 +6,6 @@ import ListDoctors from "./pages/ListDoctors"
 function App() {
 
   return (
-    
-    <div>
-      <Home />
 
       <BrowserRouter>
 
@@ -22,7 +19,6 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 
