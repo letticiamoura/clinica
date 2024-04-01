@@ -93,6 +93,7 @@
             "cro": 5654878,
             "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
+            "area": "Cirurgião",
             "active": true
         },
         {
@@ -101,6 +102,7 @@
             "cro": 4654554,
             "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
+            "area": "Cirurgião",
             "active": true
         },
         {
@@ -109,6 +111,7 @@
             "cro": 1123235,
             "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
+            "area": "Anestesista",
             "active": true
         },
         {
@@ -117,6 +120,7 @@
             "cro": 7878555,
             "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
+            "area": "Implantodontia",
             "active": true
         },
         {
@@ -125,7 +129,8 @@
             "cro": 4454878,
             "cpf": "258.522.147-56",
             "birthDate": "29/12/1998",
-            "active": true
+            "area": "Ortodontia",
+            "active": false
         }
     ]
 }

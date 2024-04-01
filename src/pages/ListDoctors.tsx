@@ -10,12 +10,16 @@ export default function ListDoctors() {
         name: '',
         cpf: '',
         cro: '',
-        birthDate: ''
+        birthDate: '',
+        area: '',
+        active: false
     }]);
 
     useEffect(() => {
         axios.get(url) 
         .then((response) => {
+            
+            setData(prevState => ({ ...prevState, active: true}))
             setData(response.data)
             console.log(response.data)
         })
@@ -41,6 +45,8 @@ export default function ListDoctors() {
                             <TableCell>CPF</TableCell>
                             <TableCell>CRO</TableCell>
                             <TableCell>Birth Date</TableCell>
+                            <TableCell>Área</TableCell>
+                            <TableCell>active</TableCell>
                         </TableRow>
                     </TableHead>
 
@@ -51,6 +57,8 @@ export default function ListDoctors() {
                                 <TableCell>{items.cpf}</TableCell>
                                 <TableCell>{items.cro}</TableCell>
                                 <TableCell>{items.birthDate}</TableCell>
+                                <TableCell>{items.area}</TableCell>
+                                <TableCell>{items.active? 'True' : 'False'}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
