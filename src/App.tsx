@@ -9,9 +9,10 @@ function App() {
 
       <BrowserRouter>
       
-      <Home />
 
         <Routes>
+
+          <Route path="/clinica" element={<Home />}/>
 
           <Route path="/" element={<Home />}/>
 
