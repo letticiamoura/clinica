@@ -25,6 +25,9 @@ function App() {
           <Route path="/createPatients" element={<Error />}/>
           
           <Route path="/createAppointments" element={<Error />}/>
+          
+          <Route path="/listAppointments" element={<Error />}/>
+
 
         </Routes>
       </BrowserRouter>
