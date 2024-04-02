@@ -51,11 +51,12 @@ export default function Menu() {
                     <h1 className="text-xl">Patients</h1>
                     {openPatients &&(
                         <>
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/patients" >
+
+                            <Link to="/createPatients">
+                                <div className="p-3 hover:bg-slate-600">
                                     <h2>Patients</h2>
-                                </a>
-                            </div>
+                                </div>
+                            </Link>
 
                                 <Link to="/listPatients">
                                     <div className="p-3 hover:bg-slate-600">
@@ -70,16 +71,17 @@ export default function Menu() {
                     <h1 className="text-xl">Appointments</h1>
                     {openAppointments &&(
                         <>
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/appointments">
+                            <Link to="/createAppointments">
+                                <div className="p-3 hover:bg-slate-600">
                                     <h2>Appointments</h2>
-                            </a>
-                            </div>
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/listAppointments">
+                                </div>
+                            </Link>
+
+                            <Link to="/listPatients">
+                                <div className="p-3 hover:bg-slate-600">
                                     <h2>List Appointments</h2>
-                                </a>
-                            </div>
+                                </div>
+                            </Link>
                         </>
                     )}
                 </div>
@@ -88,16 +90,17 @@ export default function Menu() {
                     <h1 className="text-xl">Doctors</h1>
                     {openDoctors &&(
                         <>
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/doctors">
+                            <Link to="/createDoctors">
+                                <div className="p-3 hover:bg-slate-600">
                                     <h2>Doctors</h2>
-                                </a>
-                            </div>
-                            <div className="p-3 hover:bg-slate-600">
-                                <a href="/listDoctors">
+                                </div>
+                            </Link>
+
+                            <Link to="/listDoctors">
+                                <div className="p-3 hover:bg-slate-600">
                                     <h2>List Doctors</h2>
-                                </a>
-                            </div>
+                                </div>
+                            </Link>
                         </>
                     )}
                 </div>

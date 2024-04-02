@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import Home from "./pages/Home"
 import ListPatients from "./pages/ListPatients"
 import ListDoctors from "./pages/ListDoctors"
+import Error from "./pages/Error"
 
 function App() {
 
@@ -14,11 +16,15 @@ function App() {
 
           <Route path="/clinica" element={<Home />}/>
 
-          <Route path="/" element={<Home />}/>
-
           <Route path="/listPatients" element={<ListPatients />}/>
 
           <Route path="/listDoctors" element={<ListDoctors />}/>
+
+          <Route path="/createDoctors" element={<Error />}/>
+
+          <Route path="/createPatients" element={<Error />}/>
+          
+          <Route path="/createAppointments" element={<Error />}/>
 
         </Routes>
       </BrowserRouter>
