@@ -107,9 +107,11 @@ export default function Menu() {
 
             </div>
 
-            <div className="flex justify-center items-center">
-                <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
-            </div>
+            <Link to="/clinica/login">
+                <div className="flex justify-center items-center">
+                    <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
+                </div> 
+            </Link>
 
             <footer className="fixed bottom-0 w-[18vw]">
                 <p className="text-center opacity-50 text-white ">
