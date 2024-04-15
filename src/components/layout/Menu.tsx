@@ -34,7 +34,7 @@ export default function Menu() {
             <img    
                 src={perfil} 
                 alt="perfil" 
-                className="pt-5 m-auto object-cover h-44"
+                className="pt-5 m-auto object-cover h-40"
             />
 
             <h1 className="text-center text-xl text-white opacity-65">James Lenon</h1>
@@ -42,7 +42,7 @@ export default function Menu() {
             <div className="pt-10 text-center divide-y opacity-50 text-white">
 
                 <div className="p-4 cursor-pointer">
-                    <a href="/">
+                    <a href="/clinica">
                         <h1 className="text-xl">Home</h1>
                     </a>
                 </div>
