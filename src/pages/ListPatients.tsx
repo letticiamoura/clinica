@@ -5,11 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function ListPatients() {
 
-    const [ data, setData ] = useState([{
-        name: '',
-        cpf: '',
-        birthDate: ''
-    }])
+    const [ data, setData ] = useState([null])
 
     const [formData, setFormData] = useState({
         name: "",
