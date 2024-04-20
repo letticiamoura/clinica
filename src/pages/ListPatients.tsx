@@ -113,7 +113,7 @@ export default function ListPatients() {
                     
                         <div>
                             
-                            <label htmlFor="name" className="text-slate-600 font-bold">Name <br />
+                            <label htmlFor="name" className="text-slate-600 font-bold">Nome <br />
                                 <input 
                                     type="text" 
                                     value={formData.name}
