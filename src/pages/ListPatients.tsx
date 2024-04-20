@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function ListPatients() {
 
-    const [data, setData] = useState<{ name: string, cpf: string, birthDate: string }[]>([]);
-
+   const [data, setData] = useState<{ name: string, cpf: string, birthDate: string }[]>([]);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -14,8 +13,8 @@ export default function ListPatients() {
         birthDate: "",
         healthInsurance: "false"
       });
-
-    const url = "https://letticiamoura.github.io/api-fake/db.json";
+    const url = "https://localhost:3000/patients";
+    const urlPOST = "https://letticiamoura.github.io/api-fake/db.json";
 
     //Requisitando dados da API fake
     useEffect(() => {
@@ -51,7 +50,7 @@ export default function ListPatients() {
 
         try {
 
-          const response = await axios.post(url, { ...formData, birthDate: formattedDate });
+          const response = await axios.post(urlPOST, { ...formData, birthDate: formattedDate });
 
           setData([...data, response.data])
 
