@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function ListPatients() {
 
-    const [ data, setData ] = useState([null])
+    const [data, setData] = useState<{ name: string, cpf: string, birthDate: string }[]>([]);
+
 
     const [formData, setFormData] = useState({
         name: "",
@@ -188,9 +189,9 @@ export default function ListPatients() {
                 <TableBody>
                     {data.map((items, i) => (
                         <TableRow key={i}>
-                            <TableCell component="th" scope="row">{items.name}</TableCell>
-                            <TableCell>{items.cpf}</TableCell>
-                            <TableCell>{items.birthDate}</TableCell>
+                            <TableCell component="th" scope="row">{items?.name}</TableCell>
+                            <TableCell>{items?.cpf}</TableCell>
+                            <TableCell>{items?.birthDate}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
