@@ -18,7 +18,7 @@ export default function ListPatients() {
         healthInsurance: "false"
       });
 
-    const url = "http://localhost:3000/patients";
+    const url = "https://letticiamoura.github.io/api-fake/db.json";
 
     //Requisitando dados da API fake
     useEffect(() => {
