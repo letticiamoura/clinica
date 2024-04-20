@@ -15,21 +15,21 @@ function App() {
 
         <Routes>
 
-          <Route path="/clinica" element={<Home />}/>
+          <Route path="clinica" element={<Home />}/>
 
-          <Route path="/listPatients" element={<ListPatients />}/>
+          <Route path="listPatients" element={<ListPatients />}/>
 
-          <Route path="/listDoctors" element={<ListDoctors />}/>
+          <Route path="listDoctors" element={<ListDoctors />}/>
 
-          <Route path="/createDoctors" element={<Error />}/>
+          <Route path="createDoctors" element={<Error />}/>
 
-          <Route path="/createPatients" element={<Error />}/>
+          <Route path="createPatients" element={<Error />}/>
           
-          <Route path="/createAppointments" element={<Error />}/>
+          <Route path="createAppointments" element={<Error />}/>
           
-          <Route path="/listAppointments" element={<Error />}/>
+          <Route path="listAppointments" element={<Error />}/>
 
-          <Route path="clinica/login" element={<Login />}/>
+          <Route path="login" element={<Login />}/>
 
 
         </Routes>
