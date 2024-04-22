@@ -13,8 +13,11 @@ export default function ListPatients() {
         birthDate: "",
         healthInsurance: "false"
       });
-    const url = "https://localhost:3000/patients";
-    const urlPOST = "https://letticiamoura.github.io/api-fake/db.json";
+
+    //const url = "http://localhost:3000/patients";
+    const url = "https://letticiamoura.github.io/api-fake/db.json/patients";
+
+    const urlPOST = "https://letticiamoura.github.io/api-fake/db.json/patients";
 
     //Requisitando dados da API fake
     useEffect(() => {
