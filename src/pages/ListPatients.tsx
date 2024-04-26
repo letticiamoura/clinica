@@ -14,17 +14,18 @@ export default function ListPatients() {
         healthInsurance: "false"
       });
 
-    const url = "http://localhost:3000/patients";
-    const urlPOST = "http://localhost:3000/patients";
-   // const url = "https://letticiamoura.github.io/api-fake/db.json/patients";
+    //const url = "http://localhost:3000/patients";
+    //const urlPOST = "http://localhost:3000/patients";
+    
+    const url = "https://letticiamoura.github.io/api-fake/db.json";
 
-    //const urlPOST = "https://letticiamoura.github.io/api-fake/db.json/patients";
+    const urlPOST = "https://letticiamoura.github.io/api-fake/db.json";
 
     //Requisitando dados da API fake
     useEffect(() => {
         axios.get(url)
         .then((response) => {
-            setData(response.data)
+            setData(response.data.patients)
         })
         .catch((err) => {
             console.log("Erro ao requisitar dados " + err)
@@ -38,7 +39,13 @@ export default function ListPatients() {
     }
 
     const handleClose = () => {
-        setOpen(false)
+        setOpen(false);
+        setFormData({
+            name: '',
+            cpf: '',
+            birthDate: '',
+            healthInsurance: 'false'
+          });
     }
 
     const handleSubmit = async (e:any) => {
@@ -56,14 +63,14 @@ export default function ListPatients() {
 
           const response = await axios.post(urlPOST, { ...formData, birthDate: formattedDate });
 
-          setData([...data, response.data])
+          setData([...data, response.data.patients])
 
           alert("Paciente Cadastrado!")
 
           //Nova requisição para atualizar as informações
           axios.get(url)
           .then((resp) => {
-            setData(resp.data)
+            setData(resp.data.patients)
           })
           .catch((err) => {
             console.log("Erro ao requisitar dados " + err)
@@ -88,12 +95,12 @@ export default function ListPatients() {
     return(
 
         <div className="bg-slate-700 h-screen">
-
+        
             <div className="p-10 flex justify-between">
 
                 <h1 className="text-4xl text-center text-white">Patients</h1>
 
-                <button onClick={handleOpen} className="border p-2 rounded-md text-white">New Patients</button>
+                <button onClick={handleOpen} className="border p-2 rounded-md text-white hover:scale-105 hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1">New Patients</button>
             </div>
 
             <Modal
@@ -112,14 +119,14 @@ export default function ListPatients() {
                     <div className="flex flex-col gap-3 items-center">
                     
                         <div>
-                            
                             <label htmlFor="name" className="text-slate-600 font-bold">Nome <br />
                                 <input 
                                     type="text" 
+                                    title="Digite um nome"
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     placeholder="Seu nome completo"
-                                    className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl bg-slate-700 p-1.5" 
+                                    className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
                                 />
                             </label>
                         </div>
@@ -129,9 +136,11 @@ export default function ListPatients() {
                             <input 
                                 type="text" 
                                 value={formData.cpf}
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                                title="Digite um CPF no formato: xxx.xxx.xxx-xx"
                                 onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
                                 placeholder="XXX.XXX.XXX-XX"
-                                className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl bg-slate-700 p-1.5" 
+                                className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
                             />
                         </label>
                     </div>
@@ -140,11 +149,12 @@ export default function ListPatients() {
                         <label htmlFor="name" className="text-slate-600 font-bold">Birthday <br />
                             <input 
                                 type="date" 
+                                title="Digite a data de nascimento"
                                 name="birthday" 
                                 id="birthday" 
                                 value={formData.birthDate}
                                 onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-                                className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl bg-slate-700 p-1.5" />
+                                className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl text-white bg-slate-700 p-1.5" />
                         </label>
                     </div>
 
@@ -155,7 +165,7 @@ export default function ListPatients() {
                             id="healthInsurance" 
                             value={formData.healthInsurance}
                             onChange={(e) => setFormData({ ...formData, healthInsurance: e.target.value })} 
-                            className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl bg-slate-700 p-1.5" 
+                            className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
                         >
                             <option value="false">No</option>
                             <option value="true">Yes</option>
