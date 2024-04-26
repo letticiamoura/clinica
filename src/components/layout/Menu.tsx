@@ -44,14 +44,12 @@ export default function Menu() {
 
             {open && 
         
-                <div className="pt-10 bg-slate-950 h-screen w-64 lg:block absolute shadow-slate-600 shadow-lg">
-                   
-                   <img src={menu} alt="Menu" onClick={handleOpenMenu} className="lg:hidden absolute left-4 top-5"/>
+                <div className="h-auto pt-10 bg-slate-950 h- w-64 lg:block absolute shadow-slate-600 shadow-xl">
 
                     <img    
                         src={perfil} 
                         alt="perfil" 
-                        className="pt-8 m-auto object-cover h-40"
+                        className="pt-5 m-auto object-cover h-48"
                     />
 
             <h1 className="text-center text-xl text-white opacity-65">James Lenon</h1>
@@ -130,7 +128,7 @@ export default function Menu() {
                 </div> 
             </Link>
 
-            <footer className="pt-36 pl-14 flex justify-end items-center w-[28vw]">
+            <footer className="pt-40 items-center">
                 <p className="text-center opacity-50 text-white ">
                 Version 0.1 
                     <span className="font-light text-slate-500">&copy;direitos reservados</span></p>
