@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
        fontFamily: {
-        "font-logo": "Cormorant",
+        "logo": "Old Standard TT",
        }
     },
   },

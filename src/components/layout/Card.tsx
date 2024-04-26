@@ -4,8 +4,10 @@ interface datasProps {
 }
 
 export default function Card( {logo, title}:datasProps ) {
+    
     return (
-        <div className="p-5 h-auto rounded-xl border-[2px] w-80 lg:w-[20vw] shadow-2xl lg:h-64">
+
+        <div className="p-5 h-auto rounded-xl border-[2px] w-[70vw] lg:w-[20vw] shadow-2xl lg:h-64 sm:w-[50vw] hover:scale-110">
 
             <img 
                 src={logo} 

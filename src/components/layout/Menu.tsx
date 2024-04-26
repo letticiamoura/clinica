@@ -130,7 +130,7 @@ export default function Menu() {
                 </div> 
             </Link>
 
-            <footer className="pt-36 pl-14 flex justify-end items-center w-[50vw]">
+            <footer className="pt-36 pl-14 flex justify-end items-center w-[28vw]">
                 <p className="text-center opacity-50 text-white ">
                 Version 0.1 
                     <span className="font-light text-slate-500">&copy;direitos reservados</span></p>
@@ -224,7 +224,7 @@ export default function Menu() {
                 </div> 
             </Link>
 
-            <footer className="pt-36 pl-14 flex justify-end items-center w-[50vw]">
+            <footer className="pt-36 pl-14 lg:hidden flex justify-end items-center w-[50vw]">
                 <p className="text-center opacity-50 text-white ">
                 Version 0.1 
                     <span className="font-light text-slate-500">&copy;direitos reservados</span></p>
