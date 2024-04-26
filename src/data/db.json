@@ -8,18 +8,18 @@
       "active": true
     },
     {
-      "name": "Matheus B",
-      "cpf": "111111111111",
-      "birthDate": "29/11/2004",
-      "healthInsurance": "true",
-      "id": 2
-    },
-    {
       "name": "Leticia Moura",
       "cpf": "4564564565",
       "birthDate": "29/11/2004",
       "healthInsurance": "true",
       "id": 3
+    },
+    {
+      "name": "João Vitor",
+      "cpf": "65498712311",
+      "birthDate": "05/06/2002",
+      "healthInsurance": "true",
+      "id": 4
     }
   ],
   "doctors": [

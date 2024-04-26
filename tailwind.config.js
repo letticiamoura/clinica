@@ -6,7 +6,11 @@ export default {
     "./src/**/*.png",
   ],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        "font-logo": "Cormorant",
+       }
+    },
   },
   plugins: [],
 }
