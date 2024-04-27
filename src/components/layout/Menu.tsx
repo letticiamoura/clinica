@@ -128,12 +128,6 @@ export default function Menu() {
                 </div> 
             </Link>
 
-            <footer className="pt-40 items-center">
-                <p className="text-center opacity-50 text-white ">
-                Version 0.1 
-                    <span className="font-light text-slate-500">&copy;direitos reservados</span></p>
-            </footer>
-
                 </div>}
 
                 <div className="bg-slate-950 h-screen w-64 hidden lg:block absolute">
@@ -221,12 +215,6 @@ export default function Menu() {
                     <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
                 </div> 
             </Link>
-
-            <footer className="pt-36 pl-14 lg:hidden flex justify-end items-center w-[50vw]">
-                <p className="text-center opacity-50 text-white ">
-                Version 0.1 
-                    <span className="font-light text-slate-500">&copy;direitos reservados</span></p>
-            </footer>
 
                 </div>
         </div>

@@ -106,19 +106,22 @@ export default function ListPatients() {
             <Modal
                 open={open}
                 onClose={handleClose}
+                className="pt-10"
             >
 
             <div className="h-[90vh] w-[80vw] bg-slate-800 m-auto rounded-2xl">
                             
-                <form onSubmit={handleSubmit} action="" method="post">
+                <form onSubmit={handleSubmit} method="post">
 
-                    <h1 className="p-10 text-slate-700 text-center text-3xl lg:text-2xl font-bold">Register the <br />
+                    <h1 className="pt-5 font-mono pr-5 font-bold text-end text-4xl text-slate-500" onClick={handleClose}>X</h1>
+
+                    <h1 className="pt-5 text-slate-700 text-center text-3xl lg:text-2xl font-bold">Register the <br />
                         <span className="text-slate-600 text-5xl   lg:text-4xl font-extrabold">Patients</span>
                     </h1>
 
-                    <div className="flex flex-col gap-3 items-center">
+                    <div className="p-5 pt-10 flex flex-col gap-3 items-center">
                     
-                        <div>
+                        <div className="w-full">
                             <label htmlFor="name" className="text-slate-600 font-bold">Nome <br />
                                 <input 
                                     type="text" 
@@ -126,58 +129,58 @@ export default function ListPatients() {
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     placeholder="Seu nome completo"
-                                    className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
+                                    className="w-full lg:w-[20vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
                                 />
                             </label>
                         </div>
                     
-                    <div>
-                        <label htmlFor="name" className="text-slate-600 font-bold">CPF <br />
-                            <input 
-                                type="text" 
-                                value={formData.cpf}
-                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                                title="Digite um CPF no formato: xxx.xxx.xxx-xx"
-                                onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
-                                placeholder="XXX.XXX.XXX-XX"
-                                className="w-[50vw] lg:w-[20vw] font-normal outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
-                            />
-                        </label>
-                    </div>
-                    
-                    <div>
-                        <label htmlFor="name" className="text-slate-600 font-bold">Birthday <br />
-                            <input 
-                                type="date" 
-                                title="Digite a data de nascimento"
-                                name="birthday" 
-                                id="birthday" 
-                                value={formData.birthDate}
-                                onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-                                className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl text-white bg-slate-700 p-1.5" />
-                        </label>
-                    </div>
-
-                    <div>
-                        <label htmlFor="name" className="text-slate-600 font-bold">Health insurance <br />
-                        <select 
-                            name="value" 
-                            id="healthInsurance" 
-                            value={formData.healthInsurance}
-                            onChange={(e) => setFormData({ ...formData, healthInsurance: e.target.value })} 
-                            className="w-[50vw] lg:w-[20vw] outline-none rounded-2xl text-white bg-slate-700 p-1.5" 
-                        >
-                            <option value="false">No</option>
-                            <option value="true">Yes</option>
-                        </select>
-                        
-                        </label>
-
-                    </div>
-
-                        <div className="pt-3">
-                            <input onClick={handleSubmit}  type="submit" value="Register" className="border border-slate-500 text-xl lg:text-lg p-2 rounded-2xl text-slate-200 font-medium hover:bg-slate-700/50 hover:cursor-pointer"/>
+                        <div className="w-full">
+                            <label htmlFor="name" className="text-slate-600 font-bold">CPF <br />
+                                <input 
+                                    type="text" 
+                                    value={formData.cpf}
+                                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                                    title="Digite um CPF no formato: xxx.xxx.xxx-xx"
+                                    onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
+                                    placeholder="XXX.XXX.XXX-XX"
+                                    className="w-full lg:w-[20vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
+                                />
+                            </label>
                         </div>
+                        
+                        <div className="w-full">
+                            <label htmlFor="name" className="text-slate-600 font-bold">Birthday <br />
+                                <input 
+                                    type="date" 
+                                    title="Digite a data de nascimento"
+                                    name="birthday" 
+                                    id="birthday" 
+                                    value={formData.birthDate}
+                                    onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
+                                    className="w-full lg:w-[20vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" />
+                            </label>
+                        </div>
+
+                        <div className="w-full">
+                            <label htmlFor="name" className="text-slate-600 font-bold">Health insurance <br />
+                            <select 
+                                name="value" 
+                                id="healthInsurance" 
+                                value={formData.healthInsurance}
+                                onChange={(e) => setFormData({ ...formData, healthInsurance: e.target.value })} 
+                                className="w-full lg:w-[20vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
+                            >
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                            
+                            </label>
+
+                        </div>
+
+                    <div className="pt-3">
+                        <input onClick={handleSubmit}  type="submit" value="Register" className="border border-slate-500 text-xl lg:text-lg p-2 rounded-xl text-slate-200 font-medium hover:bg-slate-700/50 hover:cursor-pointer w-[40vw]"/>
+                    </div>
                                     
                     </div>
 
