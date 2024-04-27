@@ -2,6 +2,7 @@ import { Modal, Paper, Table, TableBody, TableCell, TableContainer, TableHead, T
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import { BiEdit, BiArchive } from "react-icons/bi";
 
 export default function ListPatients() {
 
@@ -198,6 +199,7 @@ export default function ListPatients() {
                         <TableCell>Name</TableCell>
                         <TableCell>CPF</TableCell>
                         <TableCell>birthDate</TableCell>
+                        <TableCell>Action</TableCell>
                     </TableRow>
                 </TableHead>
 
@@ -208,6 +210,13 @@ export default function ListPatients() {
                             <TableCell component="th" scope="row">{items?.name}</TableCell>
                             <TableCell>{items?.cpf}</TableCell>
                             <TableCell>{items?.birthDate}</TableCell>
+                            <TableCell>
+                                <div className="flex gap-5">
+                                    <button className="text-2xl font-medium text-green-700/50 hover:text-green-700"><BiEdit title="Edit"/></button>
+                                    <button className="text-2xl font-medium text-orange-500/50 hover:text-orange-500"> <BiArchive title="Archive"/> </button>
+                                </div>
+                            </TableCell>
+
                         </TableRow>
                     ))}
                 </TableBody>
