@@ -44,7 +44,7 @@ export default function Menu() {
 
             {open && 
         
-                <div className="h-auto pt-10 bg-slate-950 h- w-64 lg:block absolute shadow-slate-600 shadow-xl">
+                <div className="h-screen pt-10 bg-slate-950 h- w-64 lg:block absolute shadow-slate-600 shadow-xl">
 
                     <img    
                         src={perfil} 
