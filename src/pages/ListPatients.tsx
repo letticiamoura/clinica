@@ -2,7 +2,10 @@ import { Modal, Paper, Table, TableBody, TableCell, TableContainer, TableHead, T
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import { GrPrevious } from "react-icons/gr";
 import { BiEdit, BiArchive } from "react-icons/bi";
+
+import { Link } from "react-router-dom";
 
 export default function ListPatients() {
 
@@ -97,11 +100,12 @@ export default function ListPatients() {
 
         <div className="bg-slate-700 h-screen">
         
-            <div className="p-10 flex justify-between">
+            <div className="p-10 flex gap-2 justify-between">
+                <Link to="/clinica" className="pt-1"> <GrPrevious className="text-5xl md:text-5xl text-slate-400 hover:text-slate-300 font-extrabold"/> </Link>
 
-                <h1 className="text-4xl text-center text-white">Patients</h1>
+                <h1 className="pt-2 md:pt-0 text-4xl md:text-5xl text-center font-extrabold text-slate-300 mr-5">Patients</h1>
 
-                <button onClick={handleOpen} className="border p-2 rounded-md text-white hover:scale-105 hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1">New Patients</button>
+                <button onClick={handleOpen} className="border p-1 md:p-2 md:text-xl rounded-lg text-slate-300 hover:scale-105 hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1 font-bold hover:border-none">New Patients</button>
             </div>
 
             <Modal
@@ -120,9 +124,9 @@ export default function ListPatients() {
                         <span className="text-slate-600 text-5xl   lg:text-4xl font-extrabold">Patients</span>
                     </h1>
 
-                    <div className="p-5 pt-10 flex flex-col gap-3 items-center">
+                    <div className="p-5 pt-10 lg:pt-5 flex flex-col gap-3 items-center">
                     
-                        <div className="w-full">
+                        <div className="w-full lg:w-auto">
                             <label htmlFor="name" className="text-slate-600 font-bold">Nome <br />
                                 <input 
                                     type="text" 
@@ -130,12 +134,12 @@ export default function ListPatients() {
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     placeholder="Seu nome completo"
-                                    className="w-full lg:w-[20vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
+                                    className="w-full lg:w-[30vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
                                 />
                             </label>
                         </div>
                     
-                        <div className="w-full">
+                        <div className="w-full lg:w-auto">
                             <label htmlFor="name" className="text-slate-600 font-bold">CPF <br />
                                 <input 
                                     type="text" 
@@ -144,12 +148,12 @@ export default function ListPatients() {
                                     title="Digite um CPF no formato: xxx.xxx.xxx-xx"
                                     onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
                                     placeholder="XXX.XXX.XXX-XX"
-                                    className="w-full lg:w-[20vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
+                                    className="w-full lg:w-[30vw] font-normal outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
                                 />
                             </label>
                         </div>
                         
-                        <div className="w-full">
+                        <div className="w-full lg:w-auto">
                             <label htmlFor="name" className="text-slate-600 font-bold">Birthday <br />
                                 <input 
                                     type="date" 
@@ -158,18 +162,18 @@ export default function ListPatients() {
                                     id="birthday" 
                                     value={formData.birthDate}
                                     onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-                                    className="w-full lg:w-[20vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" />
+                                    className="w-full lg:w-[30vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" />
                             </label>
                         </div>
 
-                        <div className="w-full">
+                        <div className="w-full lg:w-auto">
                             <label htmlFor="name" className="text-slate-600 font-bold">Health insurance <br />
                             <select 
                                 name="value" 
                                 id="healthInsurance" 
                                 value={formData.healthInsurance}
                                 onChange={(e) => setFormData({ ...formData, healthInsurance: e.target.value })} 
-                                className="w-full lg:w-[20vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
+                                className="w-full lg:w-[30vw] outline-none rounded-2xl text-white/80 bg-slate-700 p-2" 
                             >
                                 <option value="false">No</option>
                                 <option value="true">Yes</option>
@@ -180,7 +184,7 @@ export default function ListPatients() {
                         </div>
 
                     <div className="pt-3">
-                        <input onClick={handleSubmit}  type="submit" value="Register" className="border border-slate-500 text-xl lg:text-lg p-2 rounded-xl text-slate-200 font-medium hover:bg-slate-700/50 hover:cursor-pointer w-[40vw]"/>
+                        <input onClick={handleSubmit} type="submit" value="Register" className="border border-slate-500 text-xl lg:text-lg p-2 rounded-xl text-slate-200 font-medium hover:bg-slate-700/50 hover:cursor-pointer w-[40vw] lg:w-[10vw]"/>
                     </div>
                                     
                     </div>
@@ -196,10 +200,10 @@ export default function ListPatients() {
                 {/**Cabeçario */}
                 <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>CPF</TableCell>
-                        <TableCell>birthDate</TableCell>
-                        <TableCell>Action</TableCell>
+                        <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Name</TableCell>
+                        <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CPF</TableCell>
+                        <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>birthDate</TableCell>
+                        <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Action</TableCell>
                     </TableRow>
                 </TableHead>
 

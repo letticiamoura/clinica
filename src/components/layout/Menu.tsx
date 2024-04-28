@@ -123,7 +123,7 @@ export default function Menu() {
             </div>
 
             <Link to="/clinica/login">
-                <div className="flex justify-center items-center">
+                <div className="pt-10 flex justify-center items-center">
                     <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
                 </div> 
             </Link>
@@ -210,8 +210,8 @@ export default function Menu() {
 
             </div>
 
-            <Link to="/clinica/login">
-                <div className="flex justify-center items-center">
+            <Link to="/login">
+                <div className="pt-10 flex justify-center items-center">
                     <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
                 </div> 
             </Link>

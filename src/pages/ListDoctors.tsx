@@ -1,6 +1,9 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react"
+
+import { GrPrevious } from "react-icons/gr";
 
 export default function ListDoctors() {
 
@@ -30,9 +33,10 @@ export default function ListDoctors() {
     return(
         <div className="bg-slate-700 h-screen">
 
-            <div className="p-10 flex justify-between">
-                <h1 className="text-4xl text-center text-white">Doctors</h1>
-                <button className="border p-2 rounded-md text-white">New Doctors</button>
+            <div className="p-10 flex gap-3 justify-between">
+                <Link to="/clinica"> <GrPrevious className="pt-2 text-4xl md:text-5xl text-slate-400 hover:text-slate-300 font-extrabold"/> </Link>
+                <h1 className="text-4xl mr-3 md:text-5xl text-center text-slate-300 font-extrabold">Doctors</h1>
+                <button className="border p-1 md:p-2 font-bold rounded-md text-slate-300 hover:scale-105 hover:border-none hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1">New Doctors</button>
             </div>
 
             <TableContainer component={Paper}>
@@ -41,12 +45,12 @@ export default function ListDoctors() {
 
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell>CPF</TableCell>
-                            <TableCell>CRO</TableCell>
-                            <TableCell>Birth Date</TableCell>
-                            <TableCell>Área</TableCell>
-                            <TableCell>active</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Name</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CPF</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CRO</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Birth Date</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Área</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>active</TableCell>
                         </TableRow>
                     </TableHead>
 
