@@ -9,9 +9,10 @@ import { Link } from "react-router-dom";
 
 export default function ListPatients() {
 
-   const [data, setData] = useState<{ name: string, cpf: string, birthDate: string }[]>([]);
+   const [data, setData] = useState<{ id: number, name: string, cpf: string, birthDate: string }[]>([]);
 
     const [formData, setFormData] = useState({
+        id: 0,
         name: "",
         cpf: "",
         birthDate: "",
@@ -22,8 +23,6 @@ export default function ListPatients() {
     //const urlPOST = "http://localhost:3000/patients";
     
     const url = "https://letticiamoura.github.io/api-fake/db.json";
-
-    const urlPOST = "https://letticiamoura.github.io/api-fake/db.json";
 
     //Requisitando dados da API fake
     useEffect(() => {
@@ -45,6 +44,7 @@ export default function ListPatients() {
     const handleClose = () => {
         setOpen(false);
         setFormData({
+            id: 0,
             name: '',
             cpf: '',
             birthDate: '',
@@ -65,7 +65,7 @@ export default function ListPatients() {
 
         try {
 
-          const response = await axios.post(urlPOST, { ...formData, birthDate: formattedDate });
+          const response = await axios.post(url, { ...formData, birthDate: formattedDate });
 
           setData([...data, response.data.patients])
 
@@ -82,6 +82,7 @@ export default function ListPatients() {
 
           //Vai limpar os campos
           setFormData({
+            id: 0,
             name: '',
             cpf: '',
             birthDate: '',
@@ -95,6 +96,16 @@ export default function ListPatients() {
           console.error("Erro ao enviar dados:", error);
         }
       };
+
+    const handleEdit = (id: number) => {
+        alert("Ops, em contrução");
+        console.log(id);
+    }
+
+    const handleInative = (id: number) => {
+        alert("Ops, em contrução");
+        console.log(id);
+    }
 
     return(
 
@@ -200,6 +211,7 @@ export default function ListPatients() {
                 {/**Cabeçario */}
                 <TableHead>
                     <TableRow>
+                        <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Id</TableCell>
                         <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Name</TableCell>
                         <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CPF</TableCell>
                         <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>birthDate</TableCell>
@@ -211,13 +223,14 @@ export default function ListPatients() {
                 <TableBody>
                     {data.map((items, i) => (
                         <TableRow key={i}>
+                            <TableCell>{items?.id}</TableCell>
                             <TableCell component="th" scope="row">{items?.name}</TableCell>
                             <TableCell>{items?.cpf}</TableCell>
                             <TableCell>{items?.birthDate}</TableCell>
                             <TableCell>
                                 <div className="flex gap-5">
-                                    <button className="text-2xl font-medium text-green-700/50 hover:text-green-700"><BiEdit title="Edit"/></button>
-                                    <button className="text-2xl font-medium text-orange-500/50 hover:text-orange-500"> <BiArchive title="Archive"/> </button>
+                                    <button onClick={() => handleEdit(items?.id)}  className="text-2xl font-medium text-green-700/50 hover:text-green-700"><BiEdit title="Edit"/></button>
+                                    <button onClick={() => handleInative(items?.id)}  className="text-2xl font-medium text-orange-500/50 hover:text-orange-500"> <BiArchive title="Archive"/> </button>
                                 </div>
                             </TableCell>
 

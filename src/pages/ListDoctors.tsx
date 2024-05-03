@@ -4,32 +4,41 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react"
 
 import { GrPrevious } from "react-icons/gr";
+import { BiArchive, BiEdit } from "react-icons/bi";
 
 export default function ListDoctors() {
 
-    const url = "http://localhost:3000/doctors";
+    const url = "https://letticiamoura.github.io/api-fake/db.json";
 
     const [ data, setData ] = useState([{
+        id: 0,
         name: '',
         cpf: '',
         cro: '',
         birthDate: '',
         area: '',
-        active: false
     }]);
 
     useEffect(() => {
         axios.get(url) 
         .then((response) => {
-            
-            setData(prevState => ({ ...prevState, active: true}))
-            setData(response.data)
-            console.log(response.data)
+            setData(response.data.doctors)
         })
         .catch((err) => {
             console.log("Erro ao requisitar dados " + err)
         })
     })
+
+    const handleEdit = (id: number) => {
+        alert("Ops, em contrução");
+        console.log(id);
+    }
+
+    const handleInative = (id: number) => {
+        alert("Ops, em contrução");
+        console.log(id);
+    }
+
     return(
         <div className="bg-slate-700 h-screen">
 
@@ -45,24 +54,31 @@ export default function ListDoctors() {
 
                     <TableHead>
                         <TableRow>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Id</TableCell>
                             <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Name</TableCell>
                             <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CPF</TableCell>
                             <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>CRO</TableCell>
                             <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Birth Date</TableCell>
                             <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Área</TableCell>
-                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>active</TableCell>
+                            <TableCell style={{fontSize: '1.1em', opacity: '90%'}}>Action</TableCell>
                         </TableRow>
                     </TableHead>
 
                     <TableBody>
                         {data.map((items, i) => (
                             <TableRow key={i}>
+                                <TableCell>{items.id}</TableCell>
                                 <TableCell component="th" scope="row">{items.name}</TableCell>
                                 <TableCell>{items.cpf}</TableCell>
                                 <TableCell>{items.cro}</TableCell>
                                 <TableCell>{items.birthDate}</TableCell>
                                 <TableCell>{items.area}</TableCell>
-                                <TableCell>{items.active? 'True' : 'False'}</TableCell>
+                                <TableCell>
+                                <div className="flex gap-5">
+                                    <button onClick={() => handleEdit(items?.id)}  className="text-2xl font-medium text-green-700/50 hover:text-green-700"><BiEdit title="Edit"/></button>
+                                    <button onClick={() => handleInative(items?.id)}  className="text-2xl font-medium text-orange-500/50 hover:text-orange-500"> <BiArchive title="Archive"/> </button>
+                                </div>
+                            </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

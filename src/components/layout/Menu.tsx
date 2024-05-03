@@ -86,13 +86,13 @@ export default function Menu() {
                     <h1 className="text-xl">Appointments</h1>
                     {openAppointments &&(
                         <>
-                            <Link to="/clinica/createAppointments">
+                            <Link to="/createAppointments">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>Appointments</h2>
                                 </div>
                             </Link>
 
-                            <Link to="/clinica/listPatients">
+                            <Link to="/listPatients">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>List Appointments</h2>
                                 </div>
@@ -105,13 +105,13 @@ export default function Menu() {
                     <h1 className="text-xl">Doctors</h1>
                     {openDoctors &&(
                         <>
-                            <Link to="/clinica/createDoctors">
+                            <Link to="/createDoctors">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>Doctors</h2>
                                 </div>
                             </Link>
 
-                            <Link to="/clinica/listDoctors">
+                            <Link to="/listDoctors">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>List Doctors</h2>
                                 </div>
@@ -122,7 +122,7 @@ export default function Menu() {
 
             </div>
 
-            <Link to="/clinica/login">
+            <Link to="/login">
                 <div className="pt-10 flex justify-center items-center">
                     <button className="p-2 border border-slate-400 text-center text-white rounded-lg hover:bg-slate-700/50 w-36 cursor-pointer">Logout</button>
                 </div> 
@@ -174,13 +174,13 @@ export default function Menu() {
                     <h1 className="text-xl">Appointments</h1>
                     {openAppointments &&(
                         <>
-                            <Link to="/clinica/createAppointments">
+                            <Link to="/createAppointments">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>Appointments</h2>
                                 </div>
                             </Link>
 
-                            <Link to="/clinica/listPatients">
+                            <Link to="/listPatients">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>List Appointments</h2>
                                 </div>
@@ -193,13 +193,13 @@ export default function Menu() {
                     <h1 className="text-xl">Doctors</h1>
                     {openDoctors &&(
                         <>
-                            <Link to="/clinica/createDoctors">
+                            <Link to="/createDoctors">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>Doctors</h2>
                                 </div>
                             </Link>
 
-                            <Link to="/clinica/listDoctors">
+                            <Link to="/listDoctors">
                                 <div className="p-3 hover:bg-slate-600">
                                     <h2>List Doctors</h2>
                                 </div>

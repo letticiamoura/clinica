@@ -20,6 +20,20 @@
       "birthDate": "05/06/2002",
       "healthInsurance": "true",
       "id": 4
+    },
+    {
+      "name": "Marisa Montes",
+      "cpf": "65498712311",
+      "birthDate": "05/06/2002",
+      "healthInsurance": "true",
+      "id": 5
+    },
+    {
+      "name": "Ian Nogueira",
+      "cpf": "65498712311",
+      "birthDate": "05/06/2002",
+      "healthInsurance": "true",
+      "id": 6
     }
   ],
   "doctors": [

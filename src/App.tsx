@@ -5,6 +5,7 @@ import ListPatients from "./pages/ListPatients"
 import ListDoctors from "./pages/ListDoctors"
 import Error from "./pages/Error"
 import Login from "./pages/Login"
+import ListAppointments from "./pages/ListAppointments"
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
           
           <Route path="createAppointments" element={<Error />}/>
           
-          <Route path="listAppointments" element={<Error />}/>
+          <Route path="listAppointments" element={<ListAppointments />}/>
 
           <Route path="login" element={<Login />}/>
 
