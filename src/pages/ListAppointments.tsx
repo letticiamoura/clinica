@@ -46,15 +46,15 @@ export default function ListAppointments() {
 
     return(
         
-        <div className="bg-slate-700 h-screen">
+        <div className="bg-slate-700 h-screen w-full">
 
-            <div className="p-10 flex gap-3 justify-between">
+            <div className="p-10 flex gap-2 justify-between">
                 
-                <Link to="/clinica"> <GrPrevious className="pt-2 text-4xl md:text-5xl text-slate-400 hover:text-slate-300 font-extrabold"/> </Link>
+                <Link to="/clinica" className="pt-1"> <GrPrevious className="text-5xl md:text-5xl text-slate-400 hover:text-slate-300 font-extrabold"/> </Link>
 
-                <h1 className="text-4xl mr-3 md:text-5xl text-center text-slate-300 font-extrabold">Appointments</h1>
+                <h1 className="text-3xl mr-3 md:text-5xl text-center text-slate-300 font-extrabold">Appointments</h1>
 
-                <button onClick={handleOpen} className="border p-1 md:p-2 font-bold rounded-md text-slate-300 hover:scale-105 hover:border-none hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1">New Appointments</button>
+                <button onClick={handleOpen} className="border p-1 md:p-2 md:text-xl rounded-lg text-slate-300 hover:scale-105 hover:bg-gradient-to-r from-slate-500 to-slate-600 hover:inset-x-4 hover:inset-y-1 font-bold hover:border-none text-xl w-[20vw] md:w-[10vw]">New</button>
 
             </div>
 
