@@ -20,7 +20,7 @@ export default function Login() {
 
                 <div className="pt-5 md:pt-1 h-[80vh] lg:h-full w-full md:w-[40vw]">
 
-                    <h1 className="lg:p-20 text-4xl md:text-5xl text-center text-slate-600 font-semibold">Faça seu <br />
+                    <h1 className="lg:p-20 text-4xl md:text-5xl text-center text-slate-600 font-semibold">Faça o seu <br />
                         <span className="text-5xl text-slate-400 font-extrabold">Login</span>
                     </h1>
 
